@@ -200,5 +200,144 @@ body {
 .subtitulos{
     font-family:'South East';
     font-size: 3rem;
+    word-spacing: 1.0rem;
+    color: #EF4444;;
+    margin-bottom: 1rem;
+}
+
+.texto1{
+font-family: 'Surprise Birthday', cursive;
+    font-size: 1.8rem;
+    color: black;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: left;
+    
+}
+
+.texto2{
+font-family: 'Surprise Birthday', cursive;
+    font-size: 1.7rem;
+    color: black;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: justify;
+    
+}
+.seccion-gps {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion-gps h1 {
+    font-family:'South East';
+    font-size: 3em;
+    color: #EF4444;
+    margin-bottom: 10px;
+}
+
+.seccion-gps h2 {
+    font-family: 'Surprise Birthday', cursive;
+    font-size: 3em;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.seccion-gps .btn {
+    padding: 15px 40px;
+    font-size: 1.1em;
+    background-color: #EF4444;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.seccion-gps .btn:hover {
+    background-color: #cc0000;
+}
+
+/* Animaciones */
+@keyframes pulso {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+}
+
+@keyframes giro {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(8deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Estilos base GPS */
+.gps-icon {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Variaciones con posición y tamaño */
+.gps1 { top: 15%; left: 20%; width: 35px; animation: pulso 2s infinite; }
+.gps2 { top: 25%; left: 75%; width: 45px; animation: flotar 3s infinite; }
+.gps3 { top: 50%; left: 80%; width: 40px; animation: giro 4s infinite; }
+.gps4 { top: 65%; left: 30%; width: 30px; animation: flotar 2.5s infinite ease-in-out; }
+.gps5 { top: 40%; left: 60%; width: 38px; animation: pulso 3s infinite ease-in; }
+.gps6 { top: 70%; left: 85%; width: 42px; animation: giro 3s infinite ease-out; }
+.gps7 { top: 35%; left: 10%; width: 32px; animation: pulso 1.5s infinite; }
+.gps8 { top: 20%; left: 50%; width: 36px; animation: flotar 2s infinite ease-in-out; }
+.footer {
+    position: relative;
+    background-color: #ff4d4d;
+    color: white;
+    text-align: center;
+    padding: 100px 20px 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-wave {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
+    z-index: 1;
+}
+
+.footer-links {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #dfffc4;
+}
+
 
 
