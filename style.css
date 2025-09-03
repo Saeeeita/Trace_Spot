@@ -1,77 +1,69 @@
 /* Carga de la fuente "South East" */
 @font-face {
     font-family: 'South East';
-    /* ¡IMPORTANTE! Asegúrate de que la ruta a tu archivo de fuente sea correcta. */
-    src: url('South\ East\ Regular.ttf') format('truetype'); /* O 'woff2', 'opentype', etc. según tu archivo real */
+    src: url('/Trace_Spot/South East Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Chocolate Buttons';
-    /* ¡IMPORTANTE! Asegúrate de que la ruta a tu archivo de fuente sea correcta. */
-    src: url('Chocolate\ Buttons.otf') format('truetype'); /* O 'woff2', 'opentype', etc. según tu archivo real */
+    src: url('/Trace_Spot/Chocolate Buttons.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Sunday Walk';
-    /* ¡IMPORTANTE! Asegúrate de que la ruta a tu archivo de fuente sea correcta. */
-    src: url('Sunday\ Walk.otf') format('truetype'); /* O 'woff2', 'opentype', etc. según tu archivo real */
+    src: url('/Trace_Spot/Sunday Walk.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lunette Bold';
-    /* ¡IMPORTANTE! Asegúrate de que la ruta a tu archivo de fuente sea correcta. */
-    src: url('Lunette\ Bold.ttf') format('truetype'); /* O 'woff2', 'opentype', etc. según tu archivo real */
+    src: url('/Trace_Spot/Lunette Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'Surprise Birthday';
-    /* ¡IMPORTANTE! Asegúrate de que la ruta a tu archivo de fuente sea correcta. */
-    src: url('Surprise\ Birthday.otf') format('truetype'); /* O 'woff2', 'opentype', etc. según tu archivo real */
+    src: url('/Trace_Spot/Surprise Birthday.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 /* Aplicar el color de fondo blanco al cuerpo y la fuente Inter */
 body {
-    background-color: #FFFFFF; /* Fondo blanco */
-    font-family: 'Inter', sans-serif; /* Fuente general para el cuerpo */
+    background-color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Estilos para el SVG incrustado en la navegación */
-/* Nota: el 'fill' en el SVG puede ser sobrescrito por CSS */
 #nav-logo-svg-container svg {
-    height: 40px; /* Ajusta la altura del SVG aquí si es necesario */
+    height: 40px;
     width: auto;
 }
 
 #nav-logo-svg-container .trace-color {
-    fill: #EF4444; /* Verde de Tailwind green-500 */
+    fill: #EF4444;
 }
 
 #nav-logo-svg-container .spot-color {
-    fill: #EF4444; /* Rojo de Tailwind red-500 */
+    fill: #EF4444;
 }
 
 /* Estilos para el texto "Trace Spot" al lado del logo */
 .nav-title {
-    font-family: 'South East', cursive; /* Aplica la fuente South East al texto */
+    font-family: 'South East', cursive;
 }
 
 .nav-title .trace-color-text {
-    color: #EF4444; /* Verde para "Trace" */
+    color: #EF4444;
 }
 
 .nav-title .spot-color-text {
-    color: #EF4444; /* Rojo para "Spot" */
+    color: #EF4444;
 }
-
 
 /* Estilos para el menú desplegable de idioma */
 .language-selector {
@@ -124,7 +116,7 @@ body {
     transform: translateY(0);
 }
     50% {
-    transform: translateY(-15px); /* Mueve la imagen 15px hacia arriba */
+    transform: translateY(-15px);
 }
     100% {
     transform: translateY(0);
@@ -160,7 +152,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 400px;
-    position: relative; /* Muy importante para posicionar el pseudo-elemento */
+    position: relative;
     overflow: hidden;
     filter: brightness(1.05) contrast(1.1);
     image-rendering: -webkit-optimize-contrast;
@@ -168,33 +160,32 @@ body {
 
 /* Crear una capa de fondo transparente */
 .bg-seccion2::before {
-    content: ''; /* Obligatorio para pseudo-elementos */
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('tracespot2.jpg'); /* Aplica la imagen aquí */
+    background-image: url('/Trace_Spot/tracespot2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity:0;
-    z-index: -1; /* Mueve esta capa detrás del contenido (texto y mapacel) */
+    z-index: -1;
 }
 
 /* Asegúrate de que el contenido de la sección tenga un z-index mayor o por defecto */
-.bg-seccion2 > div { /* Apunta al div contenedor dentro de la sección */
-    position: relative; /* Asegura que el contenido esté en su propio contexto de apilamiento */
-    z-index: 1; /* Para que esté por encima del pseudo-elemento de fondo */
+.bg-seccion2 > div {
+    position: relative;
+    z-index: 1;
 }
 
 /* Asegura que el texto y la imagen mapacel también estén por encima */
 .bg-seccion2 h1,
 .bg-seccion2 p,
-
 .mapacel {
-    position: relative; /* Asegura que puedan usar z-index */
-    z-index: 2; /* Mayor que el z-index del pseudo-elemento de fondo */
+    position: relative;
+    z-index: 2;
 }
 #mapacel {
     animation: floatAnimation 5s ease-in-out infinite;
@@ -209,142 +200,5 @@ body {
 .subtitulos{
     font-family:'South East';
     font-size: 3rem;
-    word-spacing: 1.0rem;
-    color: #EF4444;;
-    margin-bottom: 1rem;
-}
 
-.texto1{
-font-family: 'Surprise Birthday', cursive;
-    font-size: 1.8rem; /* Un poco más grande */
-    color: black; /* Sombra para resaltar */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    line-height: 1.5; /* Mejora la lectura */
-    margin-bottom: 1rem; /* Espacio con lo siguiente */
-    text-align: left; /* Centrado opcional */
-    
-}
-
-.texto2{
-font-family: 'Surprise Birthday', cursive;
-    font-size: 1.7rem; /* Un poco más grande */
-    color: black; /* Sombra para resaltar */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    line-height: 1.5; /* Mejora la lectura */
-    margin-bottom: 1rem; /* Espacio con lo siguiente */
-    text-align: justify; /* Centrado opcional */
-    
-}
-.seccion-gps {
-    text-align: center;
-    padding: 80px 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.seccion-gps h1 {
-    font-family:'South East';
-    font-size: 3em;
-    color: #EF4444;
-    margin-bottom: 10px;
-}
-
-.seccion-gps h2 {
-    font-family: 'Surprise Birthday', cursive;
-    font-size: 3em;
-    color: black;
-    margin-bottom: 30px;
-}
-
-.seccion-gps .btn {
-    padding: 15px 40px;
-    font-size: 1.1em;
-    background-color: #EF4444;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.seccion-gps .btn:hover {
-    background-color: #cc0000;
-}
-
-/* Animaciones */
-@keyframes pulso {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.2); }
-}
-
-@keyframes flotar {
-    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-    50% { transform: translate(-50%, -50%) translateY(-10px); }
-}
-
-@keyframes giro {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    50% { transform: translate(-50%, -50%) rotate(8deg); }
-    100% { transform: translate(-50%, -50%) rotate(0deg); }
-}
-
-/* Estilos base GPS */
-.gps-icon {
-    position: absolute;
-    width: 40px;
-    height: auto;
-    z-index: 10;
-    pointer-events: none;
-}
-
-/* Variaciones con posición y tamaño */
-.gps1 { top: 15%; left: 20%; width: 35px; animation: pulso 2s infinite; }
-.gps2 { top: 25%; left: 75%; width: 45px; animation: flotar 3s infinite; }
-.gps3 { top: 50%; left: 80%; width: 40px; animation: giro 4s infinite; }
-.gps4 { top: 65%; left: 30%; width: 30px; animation: flotar 2.5s infinite ease-in-out; }
-.gps5 { top: 40%; left: 60%; width: 38px; animation: pulso 3s infinite ease-in; }
-.gps6 { top: 70%; left: 85%; width: 42px; animation: giro 3s infinite ease-out; }
-.gps7 { top: 35%; left: 10%; width: 32px; animation: pulso 1.5s infinite; }
-.gps8 { top: 20%; left: 50%; width: 36px; animation: flotar 2s infinite ease-in-out; }
-.footer {
-    position: relative;
-  background-color: #ff4d4d; /* Verde vibrante tipo Duolingo */
-    color: white;
-    text-align: center;
-    padding: 100px 20px 40px;
-    font-family: 'Arial', sans-serif;
-}
-
-.footer-wave {
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: white;
-    border-bottom-left-radius: 50% 40px;
-    border-bottom-right-radius: 50% 40px;
-    z-index: 1;
-}
-
-.footer-links {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #dfffc4;
-}
 
